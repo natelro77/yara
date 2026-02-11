@@ -1,45 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metamorphosis</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="garden-container">
+    <h1>For my queen Yara ❤️</h1>
 
-  <section class="hero">
-    <h1>Metamorphosis</h1>
-    <p>Some people don’t just exist. They shift the atmosphere.</p>
-    <button id="enterBtn">Enter</button>
-  </section>
+    <div class="butterfly" onclick="showCompliment('From the moment I met you, I knew there was something rare about you.')">🦋</div>
+    <div class="butterfly" onclick="showCompliment('You’re genuinely gorgeous. Not just in appearance, but in presence.')">🦋</div>
+    <div class="butterfly" onclick="showCompliment('Your smile shifts moods. It changes rooms.')">🦋</div>
+    <div class="butterfly" onclick="showCompliment('You’re my favorite person. And I don’t say that lightly.')">🦋</div>
 
-  <section class="section hidden">
-    <h2>Rare</h2>
-    <p>From the moment I met you, I knew there was something different about you.</p>
-  </section>
-
-  <section class="section hidden">
-    <h2>Gorgeous</h2>
-    <p>You’re genuinely gorgeous. Not just in how you look, but in the way you carry yourself.</p>
-  </section>
-
-  <section class="section hidden">
-    <h2>That Smile</h2>
-    <p>Your smile changes rooms. It shifts energy without trying.</p>
-  </section>
-
-  <section class="section hidden">
-    <h2>Favorite</h2>
-    <p>You’re my favorite person. And that’s not something I say lightly.</p>
-  </section>
+    <div id="modal" class="modal">
+      <p id="modal-text"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
