@@ -1,23 +1,11 @@
-const sections = document.querySelectorAll(".section");
+const modal = document.getElementById("modal");
+const modalText = document.getElementById("modal-text");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.remove("hidden");
-    }
-  });
-}, {
-  threshold: 0.2
-});
+function showCompliment(text) {
+  modalText.innerText = text;
+  modal.style.display = "flex";
+}
 
-sections.forEach(section => {
-  observer.observe(section);
-});
-
-document.getElementById("enterBtn").addEventListener("click", () => {
-  window.scrollTo({
-    top: window.innerHeight,
-    behavior: "smooth"
-  });
-});
-
+function closeModal() {
+  modal.style.display = "none";
+}
