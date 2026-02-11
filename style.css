@@ -1,74 +1,73 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --font-display: 'Dancing Script', cursive;
+  --font-body: 'Quicksand', sans-serif;
+  --background-dark: #0f0f14;
+  --accent-pink: #f6c1d1;
+  --text-white: #f8f6f2;
 }
 
 body {
-  background: #0f0f14;
-  color: #f8f6f2;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-
-.hero {
-  height: 100vh;
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--background-dark);
+  color: var(--text-white);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
+  height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #f6c1d1;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-pink);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-h2 {
-  font-family: 'Playfair Display', serif;
-  color: #f6c1d1;
-  margin-bottom: 1rem;
-}
-
-p {
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-button {
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
-  border: none;
-  background: #f6c1d1;
-  color: #0f0f14;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 30px;
-}
-
-.section {
-  min-height: 100vh;
+.garden-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+
+.butterfly {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.butterfly:hover {
+  transform: scale(1.5) rotate(10deg);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-dark);
+  border: 2px solid var(--accent-pink);
   padding: 2rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal p {
   text-align: center;
-  opacity: 1;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  font-size: 1.2rem;
 }
 
-.hidden {
-  opacity: 0;
-  transform: translateY(40px);
+.modal button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background: var(--accent-pink);
+  color: var(--background-dark);
+  cursor: pointer;
+  font-weight: bold;
 }
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-}
-
