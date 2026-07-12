@@ -62,6 +62,11 @@ function showStage(id) {
   requestAnimationFrame(() => target.classList.add('visible'));
 }
 
+// Reveal the initial landing stage (showStage() is only invoked on later transitions).
+requestAnimationFrame(() => {
+  document.getElementById('stage-landing').classList.add('visible');
+});
+
 document.querySelectorAll('.easter-heart').forEach((btn) => {
   btn.addEventListener('click', () => {
     const id = btn.dataset.egg;
