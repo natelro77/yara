@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>For Yara</title>
+  <meta name="description" content="A little something made just for Yara." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="floating-hearts"></div>
+
+  <button id="music-toggle" aria-label="Play music">🔇</button>
+  <audio id="bg-music" src="love-theme.mp3" loop preload="none"></audio>
+
+  <main id="app">
+
+    <!-- LANDING -->
+    <section id="stage-landing" class="stage active">
+      <button class="easter-heart" style="bottom:2rem;left:2rem;" data-egg="landing">❤</button>
+      <p class="landing-hey font-script">Hey Yara ❤️</p>
+      <h1 class="landing-headline">I made something just for you...</h1>
+      <button id="btn-begin" class="btn btn-primary glow-heart">Begin</button>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="stage-memories" class="stage">
+      <button class="easter-heart" style="top:2rem;right:2rem;" data-egg="memories">❤</button>
+      <p class="memories-date font-script">August 8th, 2025 — that's when it all began</p>
+      <h2 class="memories-headline">Before I ask you something...</h2>
+
+      <div class="cards-grid">
+        <div class="flip-card" data-card="conversations">
+          <div class="flip-card-inner">
+            <div class="flip-card-face flip-card-front glass-card">
+              <span class="card-icon">💬</span>
+              <p>Our conversations</p>
+              <span class="card-hint">tap to open</span>
+            </div>
+            <div class="flip-card-face flip-card-back">
+              <p>Every conversation somehow became the best part of my day.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" data-card="laughs">
+          <div class="flip-card-inner">
+            <div class="flip-card-face flip-card-front glass-card">
+              <span class="card-icon">😄</span>
+              <p>Our laughs</p>
+              <span class="card-hint">tap to open</span>
+            </div>
+            <div class="flip-card-face flip-card-back">
+              <p>You make even ordinary moments unforgettable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" data-card="moments">
+          <div class="flip-card-inner">
+            <div class="flip-card-face flip-card-front glass-card">
+              <span class="card-icon">✨</span>
+              <p>Every little moment</p>
+              <span class="card-hint">tap to open</span>
+            </div>
+            <div class="flip-card-face flip-card-back">
+              <p>Somehow, you slowly became my favorite person.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="btn-continue-memories" class="btn btn-primary" style="margin-top:3.5rem;display:none;">Continue</button>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="stage-quiz" class="stage">
+      <button class="easter-heart" style="bottom:2.5rem;right:2.5rem;" data-egg="quiz">❤</button>
+      <h2 class="quiz-eyebrow">A very scientific quiz</h2>
+
+      <div class="quiz-box glass-card" id="quiz-box"></div>
+
+      <button id="btn-continue-quiz" class="btn btn-primary" style="margin-top:2.5rem;display:none;">Continue</button>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="stage-timeline" class="stage">
+      <button class="easter-heart" style="top:2rem;left:2rem;" data-egg="timeline-top">❤</button>
+      <button class="easter-heart" style="bottom:2rem;right:2rem;" data-egg="timeline-bottom">❤</button>
+
+      <h2 class="timeline-headline">Our little story so far</h2>
+
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <span class="timeline-dot">❤</span>
+          <div class="timeline-content glass-card">
+            <p class="timeline-title">We started talking</p>
+            <p class="timeline-date">August 8th, 2025</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot">❤</span>
+          <div class="timeline-content glass-card">
+            <p class="timeline-title">We kept getting closer</p>
+            <p class="timeline-date">October 2025</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot">❤</span>
+          <div class="timeline-content glass-card">
+            <p class="timeline-title">Countless laughs</p>
+            <p class="timeline-note font-script">Literally always</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot">❤</span>
+          <div class="timeline-content glass-card">
+            <p class="timeline-title">Me catching feelings</p>
+            <p class="timeline-note font-script">We both know the answer</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot">❤</span>
+          <div class="timeline-content glass-card">
+            <p class="timeline-title">Today</p>
+            <p class="timeline-date">July 12th, 2026</p>
+            <p class="timeline-note font-script">Madly in love with you</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="timeline-closing font-script">Which brings me to this moment...</p>
+      <button id="btn-continue-timeline" class="btn btn-primary">Continue</button>
+    </section>
+
+    <!-- SECRET UNLOCKED -->
+    <section id="stage-secret" class="stage">
+      <div class="secret-card glass-card">
+        <span class="secret-heart glow-heart">❤️</span>
+        <h2 class="secret-title">❤️ Achievement Unlocked ❤️</h2>
+        <p>You found every little piece of my heart.</p>
+        <button id="btn-continue-secret" class="btn btn-primary">Continue</button>
+      </div>
+    </section>
+
+    <!-- PROPOSAL -->
+    <section id="stage-proposal" class="stage">
+      <p id="typing-text" class="typing-text font-script"></p>
+
+      <div class="proposal-question-wrap" id="proposal-question-wrap">
+        <h1 class="proposal-question">Will you officially be my girlfriend? ❤️</h1>
+
+        <div class="proposal-buttons" id="proposal-buttons">
+          <button id="btn-yes" class="btn btn-primary glow-heart">❤️ YES</button>
+          <button id="btn-no" class="btn btn-outline">💔 NO</button>
+        </div>
+
+        <div class="no-response glass-card" id="no-response">
+          <p class="no-response-title" id="no-response-title"></p>
+          <p class="no-response-subtitle" id="no-response-subtitle"></p>
+        </div>
+
+        <div class="final-message glass-card" id="final-message">
+          <p class="fm-script" data-line="0">Okay ❤️</p>
+          <p class="fm-script" data-line="1">Seriously...</p>
+          <p class="fm-script" data-line="2">No pressure.</p>
+          <p class="fm-plain" data-line="3">Whatever you choose, I just wanted you to know how much you mean to me.</p>
+        </div>
+
+        <p class="restored-note" id="restored-note" style="display:none;">Both buttons work now. Whatever you choose is okay.</p>
+      </div>
+    </section>
+
+    <!-- SUCCESS -->
+    <section id="stage-success" class="stage">
+      <div id="success-sparkles" style="position:absolute;inset:0;"></div>
+      <span class="success-heart glow-heart">❤️</span>
+      <h1 class="success-headline">SHE SAID YES!! ❤️</h1>
+      <p class="success-message">You just made me the happiest guy.</p>
+      <p class="success-names font-script">Nate ❤️ Yara</p>
+      <p class="success-officially">Officially.</p>
+    </section>
+
+    <!-- DECLINED -->
+    <section id="stage-declined" class="stage">
+      <span class="declined-heart">❤</span>
+      <p class="declined-message">Thank you for being honest. ❤️</p>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
